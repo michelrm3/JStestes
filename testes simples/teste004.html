@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(164, 164, 255);
+        color: aliceblue;
+        font: normal 25pt Arial; /* comentario */
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Seu nome?");
+      document.write(`<p>Oi, ${nome}. Seu nome tem ${nome.length} letras.</p>`);
+      document.writeln(`Seu nome em maiusculo é ${nome.toUpperCase()}`);
+      var n1 = Number(window.prompt("Digite um numero: "));
+      document.writeln(`<br>Numero: ${n1}`);
+      document.write(`<br>Decimal: ${n1.toFixed(2)} <br>`);
+      document.write(`Brasil: ${n1.toFixed(2).replace(".", ",")}<br>`);
+      document.write(
+        `Real: ${n1.toLocaleString("pt-br", {
+          style: "currency",
+          currency: "BRL",
+        })}`
+      );
+      //var r = (n1>500?'Maior que 500,00':'Menor ou 500,00')
+      window.alert(
+        `${(r = n1 > 500 ? "Maior que 500,00" : "Menor ou 500,00")}`
+      );
+    </script>
+  </body>
+</html>

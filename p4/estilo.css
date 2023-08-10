@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(104, 193, 245);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
+    text-align: center;
+    overflow: hidden;
+    
+    
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+div{
+    float: left;
+}
+#campos{
+    padding-left: 9px;
+}
+#botao{
+    float: left;
+    width: 300px;
+    text-align: center;
+}
+#res{
+    float: left;
+    text-align: left;
+}
+

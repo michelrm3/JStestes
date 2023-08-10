@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detram</title>
+  </head>
+  <body>
+    <h1>Sistemas de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel" /> Km/h
+    País: <input type="text" name="txtpais" id="txtpais" />
+    <input type="button" value="Verificar" id="btnVerifica" />
+    <div id="res"></div>
+
+    <script>
+      var btnVerifica = window.document.getElementById("btnVerifica");
+      btnVerifica.addEventListener("click", clicar);
+      function clicar() {
+        var valor = Number(window.document.querySelector("#txtvel").value);
+        var pais = window.document.querySelector("#txtpais").value;
+        var res = window.document.querySelector("#res");
+        res.innerHTML = `<p>Sua velocidade atual é de <strong> ${valor} Km/h </strong></p>`;
+        if (valor > 60) {
+          res.innerHTML += `<p>você está <strong>MULTADO</strong></p>`;
+        }
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`;
+        if (pais.toLowerCase().trim() == "brasil") {
+          res.innerHTML += `<p>Brasileiro</p>`;
+        } else {
+          res.innerHTML += `<p>Estrangeiro</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
